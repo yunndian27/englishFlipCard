@@ -1,0 +1,359 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei', snas-serif;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#wrapper {
+  height: 100vh;
+  background: linear-gradient(#90e0ef, #ffc8dd);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  /* overflow: hidden; */
+}
+
+/* gameName----------------------------- */
+.gameName{ 
+  width: 60%;
+  height: 18%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.ribbon {
+  font-size: 1.5rem;
+  width: 100%;
+  height: 42%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: linear-gradient(#EB5AC3 20%, #e500a4);
+  color: #fff;
+  border-radius: 7px;
+}
+
+.ribbon:before, .ribbon:after {
+  content: "";
+  position: absolute;
+  display: block;
+  bottom: -0.5em;
+  border: 1em solid #D10097;
+  border-radius: 7px;
+  z-index: -1;
+}
+
+.ribbon:before {
+  left: -1.7em;
+  border-right-width: 1.5em;
+  border-left-color: transparent;
+}
+
+.ribbon:after {
+  right: -1.7em;
+  border-left-width: 1.5em;
+  border-right-color: transparent;
+}
+
+.ribbon h1 {
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+}
+
+/* container----------------------------- */
+.container {
+  width: 85%;
+  height: 75%;
+ 
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 0 0 15px #C1F1FA;
+  
+  position: relative;
+}
+
+/* record ------------------------*/
+.record {
+  width: 100%;
+  height: 7%;
+  display: block;
+  position: absolute;
+  top: 7%;
+  left: 0;
+}
+.info{
+  width: 30%;
+  height: 100%;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  
+}
+.rec{
+  width: 30%;
+  height: 100%;
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 3px;
+}
+
+.record input {
+  font-size: 1.2rem;
+  padding: 5px 30px;
+  background: #e500a4;
+  color: #fff;
+  
+  border: none;
+  border-radius: 2rem;
+}
+
+/* game ----------------------------- */
+
+.game{
+  width: 100%;
+  height: 80%;
+
+  display: inline-block;
+  position: absolute;
+  top: 21%;
+}
+
+#game-animal, #game-letter {
+  width: 30%;
+  height: 85%;
+}
+
+#game-animal{
+  position: absolute;
+  left: 5%;
+}
+
+#game-letter{
+  position: absolute;
+  right: 5%;
+}
+
+/* show------------------------ */
+#show {
+  width: 25%;
+  height: 85%;
+
+  display: none;
+  margin: 0 auto;
+  margin: 0 5px;
+
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  overflow: hidden;
+}
+#show .desc {
+  width: 95%;
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+#show .pic-letter, #show .pic-name {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  margin-bottom: 5px;
+}
+#show h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 1.2px;
+}
+#show span {
+  font-size: 1.2rem;
+  color: #aaa;
+  font-weight: 300;
+}
+
+#show .desc .englishPic{
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+}
+
+#show .englishPic img{
+  width: 100%;
+}
+
+.ani-fadein{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* card-------------------- */
+.card {
+  width: 27%;
+  height: 26%;
+  border-radius: 3px;
+
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  float: left;
+  margin: 12px;
+}
+
+.card-front {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  position: absolute;
+  transform: rotateY(180deg);
+  box-shadow: 2px 2px 5px #ccc;
+  border-radius: 3px;
+}
+
+#game-animal .card-front{
+  background-color: #fbf07f;
+}
+
+#game-letter .card-front{
+  background-color: #d1c7f2;
+}
+
+.card-back {
+  width: 100%;
+  height: 100%;
+  
+  background-position: center;
+  background-repeat: repeat;
+  background-size: contain;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+
+  box-shadow: 2px 2px 5px #ccc;
+  border-radius: 3px;
+}
+
+#game-letter .card-back{
+  background-image: url(../images/pink_back.jpg);
+  background-color: #ffc8dd;
+} 
+
+#game-animal .card-back{
+  background-image: url(../images/yellow_back.jpg);
+  background-color: #fbf07f;
+} 
+
+.card-open {
+  transform: rotateY(180deg);
+}
+
+.container .goodPic{
+  width: 25%;
+  height: 50%;
+  font-size: 2rem;
+  color:#EB5AC3;
+  text-align: center;
+
+  /* border: 1px solid #333; */
+  background-image: url("../images/good.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  display: none;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+/* mask ------------------------ */
+
+.mask {
+  width: 50%;
+  height: 60%;
+
+  display: block;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+
+  text-align: center;
+}
+
+.mask h2 {
+  font-size: 2.4rem;
+  color: #333;
+  
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.mask .rule {
+  width: 100%;
+  font-size: 1.3rem;
+  color: #aaa;
+
+  display: inline-block;
+}
+
+.mask .rule span{
+  color: #333;
+  line-height: 2.2rem;
+  text-align: left;
+
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.fight {
+  width: 35%;
+  height: 35%;
+  position: absolute;
+  right: -30%;
+  bottom: 20%;
+}
+.fight img{
+  width: 100%;
+  height: auto;
+}
+
+/* footer ---------------- */
+.footer{
+  color: #fff;
+  position: absolute;
+  bottom: 1%;
+}

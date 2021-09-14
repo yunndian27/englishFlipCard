@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻牌小遊戲｜作業</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- 版面 -->
+    <div id="wrapper">
+        <div class="gameName">
+            <div class="ribbon">
+                <h1>英文對對碰</h1>
+            </div>
+        </div>
+
+        <!-- 遊戲區 -->
+        <div class="container">
+            <div class="goodPic">再挑戰一次吧！</div>
+            <!-- 計分 -->
+            <div class="record">
+                <div class="info">
+                    <input type="button" value="開始遊戲" id="start">
+                </div>
+                <div class="rec">
+                    <h3>學習時間： <span id="timeup">0</span> 秒</h3>
+                </div>
+            </div>
+
+            <!-- 翻牌 -->
+            <div class="game">
+                <div id="game-animal"></div>
+                <div id="show"></div>
+                <div id="game-letter"></div>
+            </div>
+
+        </div>
+
+        <!-- 訊息 -->
+        <div class="mask">
+            <div id="title">
+                <h2>翻牌遊戲說明</h2>
+            </div>
+            <div class="rule">
+                這個遊戲是認識英文字母與動物單字<br />
+                <span>
+                    1. 所有卡片隨機出現在左右兩邊，兩邊各點一個卡片<br />
+                    2. 將『英文字母A~Z』配對上『字母開頭的動物單字』<br />
+                    3. 配對成功時，中間就會出現大圖片、字母與單字<br />
+                    4. 都配對成功後，想再挑戰一次，只要按下『開始遊戲』
+                </span><br />
+                是不是很刺激呀！<br />
+                可以認識動物，又可以學英文，一舉兩得！<br />
+                快按下上方的按鈕，開始玩遊戲吧！！！
+            </div>
+            <div class="fight"><img src="./images/fight.png"></div>
+        </div>
+
+        <!-- footer -->
+        <div class="footer">© 2021 YunnDian</div>
+    </div>
+
+
+    <!-- jq -->
+    <script src="./js/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="./js/all.js"></script>
+</body>
+
+</html>
