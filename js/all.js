@@ -225,9 +225,9 @@ const playgame = () => {
 
     // 花色 打散
     for (let i = 0; i < 9; i++) {
-        $('#game-animal .card').eq(i).find('.card-front').css('background-image', `url(https://yunndian27.github.io/englishFlipCard/main/images/animal${arr[i].numbers}.jpg) `);
+        $('#game-animal .card').eq(i).find('.card-front').css('background-image', `url(/images/animal${arr[i].numbers}.jpg) `);
 
-        $('#game-letter .card').eq(i).find('.card-front').css('background-image', `url(https://yunndian27.github.io/englishFlipCard/main/images/letter${arr[i].numbers}.jpg) `);
+        $('#game-letter .card').eq(i).find('.card-front').css('background-image', `url(/images/letter${arr[i].numbers}.jpg) `);
 
         $('#game-animal .card').eq(i).attr('data-card', arr[i].numbers);
         $('#game-letter .card').eq(i).attr('data-card', arr[i].numbers);
